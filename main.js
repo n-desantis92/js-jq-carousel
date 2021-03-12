@@ -12,9 +12,15 @@ $(function () {
     }
   );
 
-  $(".fa-circle").click(
+  $(".nav .fas.fa-circle").click(
     function () {
-      bulletActive();
+      var images = $(".images img");
+      var cerchio = $(".nav .fas.fa-circle");
+      var indexImg = cerchio.index($(this));
+      $(".nav .fas.fa-circle").removeClass("active");
+      $(this).addClass("active");
+      images.removeClass("active");
+      images.eq(indexImg).addClass("active");
     }
   );
 
@@ -56,9 +62,3 @@ function nextImg() {
 
     }
 };
-
-// function bulletActive() {
-//   $(this).addClass("active");
-//
-//
-// }
