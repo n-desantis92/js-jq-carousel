@@ -12,14 +12,14 @@ $(function () {
     }
   );
 
-  $(".fas.fa-circle").click(
+  $(".fa-circle").click(
     function () {
-      var circleActive = $("i.fa-circle");
-      if (circleActive.hasClass("active") == true) {
-        circleActive.removeClass("active");
-      } else {
-        $(this).addClass("active");
-      }
+      var circleActive = $(".fa-circle");
+
+      circleActive.removeClass("active");
+      $(this).addClass("active");
+      
+
     }
   )
 
