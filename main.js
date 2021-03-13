@@ -21,9 +21,32 @@ $(function () {
       $(this).addClass("active");
       images.removeClass("active");
       images.eq(indexImg).addClass("active");
+      console.log(cerchio);
+      console.log(indexImg);
     }
+
   );
 
+
+  // uso delle frecce
+  $(document).keydown(
+    function (tasto) {
+      if (tasto.which == 37) {
+        preImg();
+        console.log("freccia sinistra");
+      }
+      else if (tasto.which == 39) {
+        nextImg();
+        console.log("freccia destra");
+      }
+    }
+  )
+
+// css inserito con javascript
+  var body = $("body");
+  body.css("background-color", "#312a29");
+  var img = $(".images img");
+  img.css("border-radius", "10px").css("box-shadow", "5px 10px rgba(0,0,0,0.5)");
 
 });
 
@@ -43,6 +66,7 @@ function preImg() {
     circleActive.prev().addClass("active");
 
   }
+
 };
 
 
